@@ -270,3 +270,8 @@ tasks:
     path: ./tmp
   - action: remove_path
     path: ./resources/[core]/esx_example
+
+  - action: replace_string
+    file: ./resources/[core]/es_extended/shared/config/main.lua
+    search: 'Config.CustomInventory = false'
+    replace: 'Config.CustomInventory = "ox"'
