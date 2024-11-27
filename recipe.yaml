@@ -33,11 +33,6 @@ tasks:
   - action: connect_database
 
   - action: download_github
-    src: https://github.com/Bob74/bob74_ipl
-    ref: master
-    dest: ./resources/[standalone]/bob74_ipl
-
-  - action: download_github
     src: https://github.com/esx-framework/esx-core
     ref: main
     dest: ./tmp/core
@@ -225,6 +220,11 @@ tasks:
   - action: move_path
     src: ./tmp/addons/
     dest: ./resources/[esx_addons]
+
+  - action: download_github
+    src: https://github.com/Bob74/bob74_ipl
+    ref: master
+    dest: ./resources/[standalone]/bob74_ipl
 
   - action: download_github
     src: https://github.com/AvarianKnight/pma-voice
