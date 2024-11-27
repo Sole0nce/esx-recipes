@@ -42,6 +42,9 @@ tasks:
     ref: main
     dest: ./tmp/core
 
+  - action: query_database
+    file: ./tmp/core/[SQL]/legacy.sql
+
   - action: download_github
     src: https://github.com/esx-framework/esx_addonaccount
     ref: main
@@ -227,9 +230,6 @@ tasks:
     src: https://github.com/AvarianKnight/pma-voice
     ref: main
     dest: ./resources/[standalone]/pma-voice
-
-  - action: query_database
-    file: ./tmp/core/[SQL]/legacy.sql
 
   - action: download_file
     path: ./tmp/files/oxmysql.zip
