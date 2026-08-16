@@ -91,9 +91,12 @@ tasks:
     ref: main
     dest: ./resources/[standalone]
 
-  - action: download_github
-    src: https://github.com/Samuels-Development/sd-phone
-    ref: main
+  - action: download_file
+    url: https://github.com/Samuels-Development/sd-phone/releases/latest/download/sd-phone.zip
+    path: ./tmp/sd-phone.zip
+  
+  - action: unzip
+    src: ./tmp/sd-phone.zip
     dest: ./resources/[standalone]
 
   ## Cleanup
