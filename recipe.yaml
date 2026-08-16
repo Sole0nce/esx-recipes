@@ -82,7 +82,7 @@ tasks:
   - action: download_github
     src: https://github.com/Samuels-Development/sd-phone-props
     ref: main
-    dest: ./resources/[standalone]
+    dest: ./resources/[standalone]/sd-phone-props
 
   - action: download_file
     url: https://github.com/Samuels-Development/sd-phone/releases/latest/download/sd-phone.zip
