@@ -70,6 +70,32 @@ tasks:
     dest: ./resources/[standalone]
     src: ./tmp/files/oxmysql.zip
 
+  - action: download_file
+    path: ./tmp/files/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
+
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/oxmysql.zip
+
+  - action: download_file
+    path: ./tmp/files/ox_lib.zip
+    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
+
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/ox_lib.zip
+
+  - action: download_github
+    src: https://github.com/Samuels-Development/sd-phone-props
+    ref: main
+    dest: ./resources/[standalone]
+
+  - action: download_github
+    src: https://github.com/Samuels-Development/sd-phone
+    ref: main
+    dest: ./resources/[standalone]
+
   ## Cleanup
   - action: remove_path
     path: ./tmp
